@@ -1,6 +1,6 @@
 # CSCI-571-HW
-Link to working GCP hosted Webiste:
-https://uschw-364223.uw.r.appspot.com/
+Master Link to working GCP hosted Webiste: (Some Links are Broken because AWS Elastic server is no longer alive)
+https://yuhaofan1.github.io/cs571/billion68.html
 In this course. I've learned about:
 1. Angular
 2. Dynamic Website Development
