@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="script/script.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <form class="form-class">
+        <div class="container">
+            <image src="image/background.jpeg" class="background-image"></image>   
+            <div class="top-left">Business Search</div>
+            <div class="bottom-left">Fill out the form to get businesses near you!</div>
+        </div>
+          <script>
+            console.log(`The path is --> `, window.location.pathname);
+            let formClass = document.querySelector('.form-class');
+            function submitForm (event) {
+              event.preventDefault();
+              console.log(`Form submitted!`);
+              const name = document.querySelector('[name]').value;
+              console.log(`The name is --> `, name);
+              // Do anything else you want here
+              formClass.reset();
+            }
+            formClass.addEventListener('submit', submitForm);
+          </script>
+
+        <div class="input">
+            <label class = "required">Keyword:</label><br>
+            <!-- <input type="text" id="keyword_box" class="keyword" required><br> -->
+            <input class ="required" type="text" name="name" id="keyword_box" required>
+
+            <div id="wrapper">
+                <div id="div1">
+                    <label class ="distance " for="distance_box">Distance(miles)</label> <br>
+                    <input type="number"step="0.000001" id="distance_box" name="distance">
+                </div>
+                <div id="div2">
+                    <label class ="Category required" for="Category_box" >Category:</label><br>
+                    <select name="Category" id="Category_box">
+                        <option value="Default">Default</option>
+                        <option value="Arts & Entertainment">Arts & Entertainment</option>
+                        <option value="Health & Medical">Health & Medical</option>
+                        <option value="Hotels & Travel">Hotels & Travel</option>
+                        <option value="Food">Food</option>
+                        <option value="Professional Services">Professional Services</option>
+                    </select>    
+                </div>
+            </div>
+                
+          
+            <div class ="location">
+                <label for = "location_box" class = "required">Location</label><br>
+                <input type="text" id="location_box" name = "location" required/>
+                <br>
+            </div>
+            
+
+            <div class="line">
+                <hr style="background-color:rgb(54, 62, 210); margin-top:20px;">
+            </div>
+
+            <div>
+                <h3>Want us to auto-detect your location? Check here
+                <input type="checkbox" id="autodetect" name="autodetect" onclick="check_box()">
+                </h3>
+
+            </div>
+            
+
+            
+        </div>
+        <button  class="button1" onclick="Submit()">SUBMIT</button>
+
+
+        <!-- type button will not refresh but won't validate -->
+        <!-- <button type="button" class="button1" onclick="Submit()">SUBMIT</button> -->
+        <button type="button" class="button2" onclick="ClearFields()">CLEAR</button>
+        
+        <style>
+            .required:after {
+              content:" *";
+              color: red;
+            }
+          </style>
+
+
+       
+    </form>
+
+    
+    <div id="summary_title" class="summary"> </div>
+    <div id="summary_body" class="summary"> </div>
+    <div id="details_text"class="details"> </div>
+    <div id="details_img"class="details"> </div>
+
+
+</body>
+</html>
